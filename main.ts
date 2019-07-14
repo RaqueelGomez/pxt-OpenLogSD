@@ -33,7 +33,7 @@ namespace OpenLog_SD {
 
     //% blockId=set_Title
     //% block="Write Title"
-    function enviarTitulo(): void {
+    export function enviarTitulo(): void {
         serial.writeLine("Tiempo, Muestras")
         initalised = true
     }
