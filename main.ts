@@ -20,17 +20,19 @@ namespace OpenLog_SD {
      * @param Valiue To choose the value
      */
     //% blockId=set_Baudrate
-    //% block="set%Baudrate"
+    //% block="set Baudrate%Value"
     //% Value.min=9600 Value.max=115200
     export function SetBaudrate(Value: number) {
-        if (Value == 1) {
+        if (Value == 9600) {
             baud = baudrate.baud1
         }
-        else if (Value == 2) {
+        else if (Value == 115200) {
             baud = baudrate.baud1
         }
     }
 
+    //% blockId=set_Title
+    //% block="Write Title"
     function enviarTitulo(): void {
         serial.writeLine("Tiempo, Muestras")
         initalised = true
